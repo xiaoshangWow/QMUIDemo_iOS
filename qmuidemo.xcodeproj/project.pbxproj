@@ -869,7 +869,6 @@
 					165F42EF1ADB60180057EF6A = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeamName = "沛钞 陈 (Personal Team)";
-						ProvisioningStyle = Automatic;
 					};
 					CDE85CF01F9701D600E622E8 = {
 						CreatedOnToolsVersion = 9.0;
@@ -936,7 +935,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		CDD4942D1E5E8C3900829B7D /* Integrate RevealServer */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -944,9 +943,9 @@
 			name = "Integrate RevealServer";
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "export REVEAL_SERVER_FILENAME=\"RevealServer.framework\"\n\n# Update this path to point to the location of RevealServer.framework in your project.\nexport REVEAL_SERVER_PATH=\"${SRCROOT}/qmuidemo/Frameworks/${REVEAL_SERVER_FILENAME}\"\n\n# If configuration is not Debug, skip this script.\n[ \"${CONFIGURATION}\" == \"Release\" ] && exit 0\n\n# If RevealServer.framework exists at the specified path, run code signing script.\nif [ -d \"${REVEAL_SERVER_PATH}\" ]; then\n\"${REVEAL_SERVER_PATH}/Scripts/copy_and_codesign_revealserver.sh\"\nelse\necho \"Reveal Server not loaded: RevealServer.framework could not be found.\"\nfi";
+			shellScript = "export REVEAL_SERVER_FILENAME=\"RevealServer.framework\"\n\n# Update this path to point to the location of RevealServer.framework in your project.\nexport REVEAL_SERVER_PATH=\"${SRCROOT}/qmuidemo/Frameworks/${REVEAL_SERVER_FILENAME}\"\n\n# If configuration is not Debug, skip this script.\n[ \"${CONFIGURATION}\" == \"Release\" ] && exit 0\n\n# If RevealServer.framework exists at the specified path, run code signing script.\nif [ -d \"${REVEAL_SERVER_PATH}\" ]; then\n\"${REVEAL_SERVER_PATH}/Scripts/copy_and_codesign_revealserver.sh\"\nelse\necho \"Reveal Server not loaded: RevealServer.framework could not be found.\"\nfi\n";
 		};
 		CDE85CF71F9701E300E622E8 /* RDM */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1241,7 +1240,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FP989NU38H;
+				DEVELOPMENT_TEAM = Q4XFD8RL5A;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1280,7 +1279,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FP989NU38H;
+				DEVELOPMENT_TEAM = Q4XFD8RL5A;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1363,10 +1362,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_DISPLAY_NAME = "QMUI (RDM)";
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tencent Technology (Shenzhen) Co., Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tencent Technology (Shenzhen) Co., Ltd";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = HKB8WPFBR9;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4XFD8RL5A;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1391,7 +1390,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qmuidemo.qmui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "9c313155-b2b0-463d-a87f-1b18c1412a88";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 			};
 			name = RDM;
